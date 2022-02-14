@@ -7,23 +7,34 @@
 
 import UIKit
 
-class GuessMiffyViewController: UIViewController {
+class GuessMiffyViewController: UIViewController, UITextFieldDelegate {
 
+    var reseavedNumberOfMiffy: Int!
+    
+    @IBOutlet weak var GuessText: UITextField!
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var nextButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        GuessText.delegate = self
+        nextButton.layer.cornerRadius = 10
+        
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func goAnswer(_ sender: Any) {
+        
+        self.performSegue(withIdentifier: "toAnswer", sender: nil)
     }
-    */
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+            if segue.identifier == "toAnswer" {
+                let nextVC = segue.destination as! AnswerViewController
+                nextVC.reseavedNumberOfMiffy = reseavedNumberOfMiffy
+                nextVC.guessMiffy = Int((textField.text)!)
+            }
+        }
 
 }

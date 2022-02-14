@@ -8,22 +8,44 @@
 import UIKit
 
 class AnswerViewController: UIViewController {
+    
+    
+    @IBOutlet weak var correctNumberLabel: UILabel!
+    @IBOutlet weak var guessNumberLabel: UILabel!
+    @IBOutlet weak var result: UILabel!
+    
+    @IBOutlet weak var button: UIButton!
+    var lovelyRate: Int!
+    
+    var reseavedNumberOfMiffy: Int!
+    var guessMiffy: Int!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        correctNumberLabel.text = String(reseavedNumberOfMiffy)
+        guessNumberLabel.text = String(guessMiffy)
+        
+        lovelyRate = abs(reseavedNumberOfMiffy - guessMiffy)
+        
+        if lovelyRate == 0 {
+            result.text = "ピッタリ正解！！すごい♡"
+        } else {
+        result.text = String("\(lovelyRate!)こずれちゃった><")
+            
+        }
+        button.layer.cornerRadius = 10
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func backTop(_ sender: Any) {
+        
+        self.presentingViewController?.presentingViewController?.presentingViewController?.dismiss(animated: true, completion: nil)
+        
     }
-    */
-
+    
+    
+    
+    
+    
 }
