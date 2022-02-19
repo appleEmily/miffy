@@ -30,10 +30,14 @@ class AddMiffyViewController: UIViewController {
     }
     
     @IBAction func addMiffy(_ sender: Any) {
+        if numberOfMiffy < 10 {
+            numberOfMiffy += 1
+            label.text = "\(numberOfMiffy) / 10ひき"
+            addMiffy()
+            
+        } else {
+        }
         
-        numberOfMiffy += 1
-        label.text = "\(numberOfMiffy)ひき"
-        addMiffy()
     }
     
     @IBAction func toGuess(_ sender: Any) {

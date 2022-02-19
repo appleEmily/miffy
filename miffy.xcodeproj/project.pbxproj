@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A1B0D7F527BFDFFA00F3749D /* 花とちょうちょ.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A1B0D7F427BFDFF500F3749D /* 花とちょうちょ.ttf */; };
 		A1D461E127BA1B2800FD727E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D461E027BA1B2800FD727E /* AppDelegate.swift */; };
 		A1D461E327BA1B2800FD727E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D461E227BA1B2800FD727E /* SceneDelegate.swift */; };
 		A1D461E527BA1B2800FD727E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1D461E427BA1B2800FD727E /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A1B0D7F427BFDFF500F3749D /* 花とちょうちょ.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "花とちょうちょ.ttf"; sourceTree = "<group>"; };
 		A1D461DD27BA1B2800FD727E /* miffy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miffy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1D461E027BA1B2800FD727E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1D461E227BA1B2800FD727E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				A1D461F427BA1F5B00FD727E /* AddMiffyViewController.swift */,
 				A1D461F627BA1F6B00FD727E /* GuessMiffyViewController.swift */,
 				A1D461F827BA1F7900FD727E /* AnswerViewController.swift */,
+				A1B0D7F427BFDFF500F3749D /* 花とちょうちょ.ttf */,
 			);
 			path = miffy;
 			sourceTree = "<group>";
@@ -134,6 +137,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1B0D7F527BFDFFA00F3749D /* 花とちょうちょ.ttf in Resources */,
 				A1D461ED27BA1B2A00FD727E /* LaunchScreen.storyboard in Resources */,
 				A1D461EA27BA1B2A00FD727E /* Assets.xcassets in Resources */,
 				A1D461E827BA1B2800FD727E /* Main.storyboard in Resources */,
